@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { db } from '../firebase/firebase';
 import "./SidebarChat.css"
-function SidebarChat({id,name,addNewChat}) {
+function SidebarChat({id,name}) {
 
   const [messages, setMessages] = useState("");
   useEffect(() => {
@@ -13,12 +13,14 @@ function SidebarChat({id,name,addNewChat}) {
         .collection("messages")
         .orderBy("timestamp", "desc")
         .onSnapshot((snapshot) =>
+       
           setMessages(snapshot.docs.map((doc) => doc.data()))
-        );
+        
+          );
     }
   }, [id]);
 
-
+  console.log(messages,"data");
 
   return  <>
     <Link to={`/chats/${id}`}>
@@ -26,7 +28,12 @@ function SidebarChat({id,name,addNewChat}) {
         <AccountCircle className='sidebarChat_icon'/>
         <div className="sidebarChat__info">
         <h2>{name}</h2>
-          <p>{messages[0]?.message}</p>
+        {messages[0]?(
+          <p className='sidebarChat__lastMsg'>{messages[0]?.name.split(' ')[0]}: 
+          <span>
+          {messages[0]?.message}
+          </span>
+          </p>):("")}
         </div>
     </div>
     </Link>

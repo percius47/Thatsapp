@@ -15,6 +15,7 @@
   }
   .sidebarChat_icon{
     font-size: 2rem !important;
+    color: var(--user-blue);
   }
   .sidebarChat__info > h2 {
     font-size: 1rem;
@@ -24,4 +25,11 @@
   .sidebarChat__info {
     margin-left: 0.95rem;
   }
-  
+  .sidebarChat__lastMsg{
+    font-weight: 400;
+  }
+  .sidebarChat__lastMsg>span{
+    font-weight: 300;
+    color: grey;
+    margin-left: 0.25rem;
+  }

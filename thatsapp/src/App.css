@@ -1,7 +1,7 @@
 :root{
  
   --CTA:#0a8d48;
- 
+ --user-blue:#53a0fd;
 
 }
 
@@ -23,3 +23,4 @@
   .MuiSvgIcon-root{
     cursor: pointer;
   }
+ 
