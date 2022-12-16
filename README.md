@@ -6,4 +6,3 @@ Chat App
 - sidebar, chatWindow, realtime messages with server timestamp
 - Pre-seeded Data, Clickable, Scrollable, Ability to add messages.
 - Last message is available on Sidebar.
-- 
