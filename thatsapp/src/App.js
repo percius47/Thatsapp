@@ -7,12 +7,16 @@ import Login from './components/Login';
 import Sidebar from './components/Sidebar';
 import Welcome from './components/Welcome';
 import { useStateValue } from './StateProvider/StateProvider';
+import {Helmet} from "react-helmet";
 function App() {
   
   const [{ user }] = useStateValue();
   return (
 
  <div className='app'>
+  <Helmet>
+    <title>Thatsapp</title>
+  </Helmet>
      {!user?(
        <Login/>
   
