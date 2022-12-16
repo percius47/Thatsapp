@@ -5,6 +5,8 @@ import React, { useState } from 'react'
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { db } from '../firebase/firebase';
+
+
 import { useStateValue } from '../StateProvider/StateProvider';
 import "./ChatWindow.css"
 export default function ChatWindow() {
@@ -73,7 +75,6 @@ export default function ChatWindow() {
        
       </div>
     </div>
-
     <div className="chat__body">
       {messages.map((message) => (
         <p
@@ -81,7 +82,8 @@ export default function ChatWindow() {
          ${     message.email === user.email && "chat__receiver"  }`
         }
         >
-          <span className="chat__name">
+          <span className={`chat__name  ${     message.email === user.email && "chat__receiverName"  }`
+        }>
             
             {message.name}
           </span>
@@ -94,6 +96,7 @@ export default function ChatWindow() {
         </p>
        ))} 
     </div>
+    
     <div className="chat__footer">
       <InsertEmoticon />
       <AttachFile />
