@@ -33,6 +33,17 @@
   .chat__header > .MuiSvgIcon-root{
     font-size: 2rem !important;
   }
+  .welcome__body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .welcome__text{
+    color: var(--CTA);
+    font-weight: 400;
+    font-size: 2rem;
+    text-align: center;
+  }
   
   .chat__body {
     flex: 1;

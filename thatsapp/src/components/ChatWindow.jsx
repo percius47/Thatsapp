@@ -10,7 +10,7 @@ import "./ChatWindow.css"
 export default function ChatWindow() {
 
   const {chatId}=useParams();
-      const [{user},dispatch]=useStateValue();
+      const [{user}]=useStateValue();
     const [input, setInput] = useState("");
     const [chatName,setChatName]=useState("");
     const [messages, setMessages] = useState([]);

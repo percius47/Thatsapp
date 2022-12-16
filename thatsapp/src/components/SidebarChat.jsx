@@ -17,18 +17,10 @@ function SidebarChat({id,name,addNewChat}) {
         );
     }
   }, [id]);
-  const createChat = () => {
-    const roomName = prompt("Please enter name for chat room");
-
-    if (roomName) {
-      db.collection("chatRooms").add({
-        Name: roomName,
-      });
-    }
-  };
 
 
-  return !addNewChat? (
+
+  return  <>
     <Link to={`/chats/${id}`}>
     <div className='sidebarChat'>
         <AccountCircle className='sidebarChat_icon'/>
@@ -38,12 +30,8 @@ function SidebarChat({id,name,addNewChat}) {
         </div>
     </div>
     </Link>
-    
-  ):(
-    <div onClick={createChat} className="sidebarChat">
-    <h2>Add new Chat</h2>
-  </div>
-  )
+    </>
+ 
 }
 
 export default SidebarChat;

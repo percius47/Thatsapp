@@ -1,8 +1,10 @@
 @import url("https://windui.netlify.app/Components/avatar.css");
+
 .sidebar {
     display: flex;
     flex-direction: column;
     flex: 0.35;
+    position: relative;
   }
   
   .sidebar__header {
@@ -59,4 +61,14 @@
     background-color: white;
     overflow: scroll;
   }
-  
+  .sidebar__addChat{
+    background-color: transparent;
+    position: absolute;
+    right: 0.5rem;
+    bottom: 3rem;
+  }
+  .sidebar__addChat>.MuiSvgIcon-root{
+   
+color: var(--CTA);
+font-size: 3.5rem;
+  }

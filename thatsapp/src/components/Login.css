@@ -24,7 +24,7 @@
   .login__container > button {
     margin-top: 3.125rem;
     text-transform: inherit !important;
-    background-color: #0a8d48;
+    background-color: var(--CTA);
     color: white;
     padding: 0.5rem;
     border-radius: 0.5rem;
