@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "./Sidebar.css"
-
+import"../App.css"
 
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 
@@ -46,9 +46,11 @@ const createChat = () => {
     
     <div className="sidebar">
     <div className="sidebar__header">
+
     <figure className="avatar ">
-    <img src={user?.photoURL} alt="Avatar" 
-className="avatar-img-lg" />
+    <img src={user.photoURL} alt="Avatar" 
+className="avatar-img-lg" 
+/>
     </figure>
     
       <div className="sidebar__headerRight">

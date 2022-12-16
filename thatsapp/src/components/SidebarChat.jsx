@@ -20,7 +20,6 @@ function SidebarChat({id,name}) {
     }
   }, [id]);
 
-  console.log(messages,"data");
 
   return  <>
     <Link to={`/chats/${id}`}>
