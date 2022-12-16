@@ -72,3 +72,10 @@
 color: var(--CTA);
 font-size: 3.5rem;
   }
+
+  @media screen and (max-width:700px){
+    
+    .sidebar{
+      width: 100%;
+    }
+  }

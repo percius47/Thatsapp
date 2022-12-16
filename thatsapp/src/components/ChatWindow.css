@@ -85,8 +85,9 @@
   .chat__name {
     position: absolute;
     top: -1rem;
-    font-weight: 800;
-    font-size: xx-small;
+    font-weight: 500;
+    font-size: 0.6rem;
+  
   }
   
   .chat__timestamp {
@@ -123,3 +124,9 @@
     color: gray;
   }
   
+  @media screen and (max-width:700px){
+    
+    .chat{
+      display: none;
+    }
+  }

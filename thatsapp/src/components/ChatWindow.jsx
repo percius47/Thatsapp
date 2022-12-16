@@ -9,6 +9,7 @@ import { db } from '../firebase/firebase';
 
 import { useStateValue } from '../StateProvider/StateProvider';
 import "./ChatWindow.css"
+import"../App.css"
 export default function ChatWindow() {
 
   const {chatId}=useParams();
@@ -83,11 +84,11 @@ export default function ChatWindow() {
         }
         >
           <span className={`chat__name  ${     message.email === user.email && "chat__receiverName"  }`
-        }>
+        } style={{textOverflow: 'ellipsis'}}>
             
-            {message.name}
+            {message?.name}
           </span>
-          {message.message}
+          {message?.message}
         
           <span className="chat__timestamp">
         
